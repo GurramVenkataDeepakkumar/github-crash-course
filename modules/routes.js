@@ -7,12 +7,14 @@ import App from './components/App'
 import Home from './components/Home'
 import NoMatch from './components/NoMatch'
 import Dragon from './components/Dragon'
+import Login from './components/Login'
 
 export default (
   <Route>
     <Route path="/" component={App}>
-      <IndexRoute component={Home}/>
-      <Route path="dragon" component={Dragon}/>
+  <IndexRoute component={Home}/>
+  <Route path="dragon" component={Dragon}/>
+  <Route path="login" component={Login}/>
     </Route>
     <ServerRoute path="/api">
       <ServerRoute path=":hello" get={hello}/>
